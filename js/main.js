@@ -210,3 +210,13 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     self.markers.push(marker);
   });
 } */
+
+/* Implementation of the service worker so our Web App works with
+ * online first approach:
+ */
+/* Before registering serviceWorker we check
+ * if its defined in the browser:*/
+ if (navigator.serviceWorker) {
+   navigator.serviceWorker.register('/sw.js')
+   .then(function() { console.log("serviceWorker register Success! :)"); });
+ }
