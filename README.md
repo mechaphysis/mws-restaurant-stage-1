@@ -27,4 +27,4 @@ For this personal repository a token/API key from [Mapbox](https://www.mapbox.co
 
 ## Contributing
 
-This is my personal repository for the Udacity  Front-End Nanodegree project: _Feed Reader Test_. I will not likely accept pull requests for the moment, but feedback is always welcome! :relaxed:
+This is my personal repository for the Udacity  Front-End Nanodegree project: _Restaurant Reviews App: Stage 1_. I will not likely accept pull requests for the moment, but feedback is always welcome! :relaxed:
