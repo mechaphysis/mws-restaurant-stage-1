@@ -119,11 +119,11 @@ nav h1 a {
 .filter-options {
   width: 100%;
   height: 50px;
-  background-color: #3397DB;
+  background-color: #005e8f;
 	/*We also implement responsiveness in this section: */
-	display: flex;
+  display: flex;
 	/*Using justify-content we effectively align to the center its children elements*/
-	justify-content: center;
+  justify-content: center;
   align-items: center;
 }
 .filter-options h2 {
