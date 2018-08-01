@@ -293,7 +293,7 @@ nav h1 a {
   border: 2px solid #f3f3f3;
   display: block;
   list-style-type: none;
-  margin: 0 0 30px;
+  margin: auto;
   overflow: hidden;
   padding: 0 20px 20px;
   position: relative;
@@ -340,14 +340,35 @@ nav h1 a {
 	.inside #map-container {
 		order: 2;
 		width: 100%;
+		height: 360px;
+		position: relative;
 	}
 	.inside #restaurant-container {
 		order: 3;
 		width: 100%;
+		padding-top: 100px;
+		position: relative;
+		/* justify-content: center; */
+		/* align-content: center; */
+		text-align: center;
+	}
+	.inside #restaurant-cuisine {
+		/* width:100%; */
+		margin: auto;
+	}
+	.inside #restaurant-hours {
+		margin:auto;
+		text-align: left;
 	}
 	.inside #reviews-container {
 		order: 4;
 		width: 100%;
+		/* margin: auto; */
+		padding-bottom: 80px;
+	}
+	#reviews-container  h2 {
+		text-align: center;
+		margin: auto;
 	}
 	.inside #footer {
 		order: 5;
