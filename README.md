@@ -4,7 +4,7 @@
 * [Dependencies](#dependencies)
 * [Contributing](#contributing)
 
-##What it is
+## What it is
 
 ### Project Overview: Stage 1
 
