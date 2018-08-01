@@ -44,7 +44,12 @@ article, aside, canvas, details, figcaption, figure, footer, header, hgroup, men
   color: #aaa;
   font-size: 8pt;
   letter-spacing: 1px;
-  padding: 25px;
+  /* padding: 25px;
+	 * Removed absolute padding in four sides to avoid
+	 * problems with flexbox, instead we apply:
+	 */
+	padding-top: 25px;
+	padding-bottom: 25px;
   text-align: center;
   text-transform: uppercase;
 }
@@ -54,6 +59,9 @@ nav {
   height: 80px;
   background-color: #252831;
   text-align:center;
+	/* We star implementing responsiveness by using flexbox for the navigation part layout as usual: */
+	display: flex;
+	align-items: center;
 }
 nav h1 {
   margin: auto;
@@ -108,6 +116,10 @@ nav h1 a {
   width: 100%;
   height: 50px;
   background-color: #3397DB;
+	/*We also implement responsiveness in this section: */
+	display: flex;
+	/*Using justify-content we effectively align to the center its children elements*/
+	justify-content: center;
   align-items: center;
 }
 .filter-options h2 {
@@ -136,6 +148,13 @@ nav h1 a {
   margin: 0;
   padding: 30px 15px 60px;
   text-align: center;
+	/*We also make responsive with flexbox the container for the restaurant elements*/
+	display: flex;
+	/*By using this flex-wrap property we avoid to only have an "overcrowded" row line with all the restaurants,
+	 * instead, the children elements flow and distribute evenly across all the avaliable space
+	 */
+	flex-wrap: wrap;
+	justify-content: center;
 }
 #restaurants-list li {
   background-color: #fff;
@@ -243,7 +262,15 @@ nav h1 a {
   width: 50%;
 }
 #reviews-container {
-  padding: 30px 40px 80px;
+  /* padding: 30px 40px 80px;
+	 * remove absolute padding for avoiding layout problems with flexbox
+	 */
+	/*We also add responsiveness here but this time we force
+	 *content distribution to be column like so it's more
+	 *similar to the non-responsive original version.
+	 */
+	 display: flex;
+	 flex-direction: column;
 }
 #reviews-container h2 {
   color: #f58500;
@@ -255,6 +282,10 @@ nav h1 a {
 #reviews-list {
   margin: 0;
   padding: 0;
+	/*We apply flexbox to this element and its children too:*/
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
 }
 #reviews-list li {
   background-color: #fff;
@@ -263,7 +294,10 @@ nav h1 a {
   list-style-type: none;
   margin: 0 0 30px;
   overflow: hidden;
-  padding: 0 20px 20px;
+  /* padding: 0 20px 20px;
+	 * we also remove absolute padding here to avoid strange
+	 * behaviour like overflow within flexbox
+	 */
   position: relative;
   width: 85%;
 }
@@ -273,3 +307,5 @@ nav h1 a {
 #restaurant-hours td {
   color: #666;
 }
+
+/* TODO: apply media queries to finish responsiveness  */
