@@ -161,11 +161,11 @@ createRestaurantHTML = (restaurant) => {
   const image = document.createElement('img');
   image.className = 'restaurant-img';
   /*Below goes the alt atribute fix for a11y:*/
-  image.alt = 'a picture of a restaurant';
+  image.alt = 'Image of ' + restaurant.name + 'Restaurant';
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h2');
   name.innerHTML = restaurant.name;
   li.append(name);
 
