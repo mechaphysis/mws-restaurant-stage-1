@@ -7,7 +7,7 @@ self.addEventListener('install', function(evt) {
         '/',
         '/index.html',
         '/restaurant.html',
-        '/css/styles.css7',
+        '/css/styles.css',
         '/data/restaurants.json',
         'img/1.jpg',
         'img/2.jpg',
@@ -22,7 +22,7 @@ self.addEventListener('install', function(evt) {
         '/js/main.js',
         '/js/restaurant_info.js',
         'dbhelper.js'
-      ]);
-    });
-  );
+      ])
+    })
+  )
 });
