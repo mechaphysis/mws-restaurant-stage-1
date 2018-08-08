@@ -26,3 +26,24 @@ self.addEventListener('install', function(evt) {
     })
   )
 });
+
+/* For proper functionality we need to add a fetch event
+ * this will retrieve our saved sources in the cache and match them
+ * with their corresponding request. This way the user will have the
+ * same experience either pffline or online
+ * This fetch basic function comes from:
+ * https://developers.google.com/web/fundamentals/primers/service-workers/
+ */
+self.addEventListener('fetch', function(event) {
+  event.respondWith(
+    caches.match(event.request)
+      .then(function(response) {
+        // Cache hit - return response
+        if (response) {
+          return response;
+        }
+        return fetch(event.request);
+      }
+    )
+  );
+});
