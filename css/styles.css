@@ -64,6 +64,7 @@ nav {
   background-color: #252831;
   text-align:center;
 	/* We star implementing responsiveness by using flexbox for the navigation part layout as usual: */
+  /* flex-direction: column; */
   display: flex;
   align-items: center;
 }
@@ -176,7 +177,7 @@ nav h1 a {
   display: block;
   margin: 0;
   max-width: 100%;
-  min-height: 248px;
+  /* min-height: 248px; */
   min-width: 100%;
 }
 #restaurants-list li h1 {
@@ -314,6 +315,14 @@ nav h1 a {
 
 /* TODO: apply media queries to finish responsiveness  */
 
+@media screen and (max-width: 548px) {
+	.filter-options {
+		flex-direction: column;
+	}
+	header nav {
+		flex-direction: column;
+	}
+}
 @media screen and (max-width: 730px) {
 	.inside {
 		display: flex;
@@ -376,12 +385,6 @@ nav h1 a {
 		width: 100%;
 	}
 
-}
-
-@media screen and (max-width: 548) {
-	.filter-options {
-		flex-direction: column;
-	}
 }
 @media screen and (min-width:731px) {
 	#restaurant-container {
