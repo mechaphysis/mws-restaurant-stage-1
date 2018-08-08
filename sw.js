@@ -21,7 +21,7 @@ self.addEventListener('install', function(evt) {
         'img/10.jpg',
         '/js/main.js',
         '/js/restaurant_info.js',
-        'dbhelper.js'
+        '/js/dbhelper.js'
       ])
     })
   )
